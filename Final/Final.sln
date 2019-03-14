@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "Edits", "Edits\Edits.cblproj", "{EA73FE51-E8FC-4FA9-AFD8-E6AB9C28276F}"
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "DataSplitCount", "DataSplitCount\DataSplitCount.cblproj", "{F813856A-4E77-4636-80CC-D47FF61F32BF}"
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "SLProcessing", "SLProcessing\SLProcessing.cblproj", "{C129D551-54FA-4921-8C53-0EC6BFE80E7B}"
+EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "TypeRProcessing", "TypeRProcessing\TypeRProcessing.cblproj", "{FC90B451-C7AE-45DA-8629-854EF64F0A68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{DF8896D8-29B5-4466-A683-5CD50B6DAF20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{76FA41B9-946D-4FEC-9F36-D50A320677E5}"
+	ProjectSection(SolutionItems) = preProject
+		build\data\project3.dat = build\data\project3.dat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA73FE51-E8FC-4FA9-AFD8-E6AB9C28276F}.Debug|x86.ActiveCfg = Debug|x86
+		{EA73FE51-E8FC-4FA9-AFD8-E6AB9C28276F}.Debug|x86.Build.0 = Debug|x86
+		{EA73FE51-E8FC-4FA9-AFD8-E6AB9C28276F}.Release|x86.ActiveCfg = Release|x86
+		{EA73FE51-E8FC-4FA9-AFD8-E6AB9C28276F}.Release|x86.Build.0 = Release|x86
+		{F813856A-4E77-4636-80CC-D47FF61F32BF}.Debug|x86.ActiveCfg = Debug|x86
+		{F813856A-4E77-4636-80CC-D47FF61F32BF}.Debug|x86.Build.0 = Debug|x86
+		{F813856A-4E77-4636-80CC-D47FF61F32BF}.Release|x86.ActiveCfg = Release|x86
+		{F813856A-4E77-4636-80CC-D47FF61F32BF}.Release|x86.Build.0 = Release|x86
+		{C129D551-54FA-4921-8C53-0EC6BFE80E7B}.Debug|x86.ActiveCfg = Debug|x86
+		{C129D551-54FA-4921-8C53-0EC6BFE80E7B}.Debug|x86.Build.0 = Debug|x86
+		{C129D551-54FA-4921-8C53-0EC6BFE80E7B}.Release|x86.ActiveCfg = Release|x86
+		{C129D551-54FA-4921-8C53-0EC6BFE80E7B}.Release|x86.Build.0 = Release|x86
+		{FC90B451-C7AE-45DA-8629-854EF64F0A68}.Debug|x86.ActiveCfg = Debug|x86
+		{FC90B451-C7AE-45DA-8629-854EF64F0A68}.Debug|x86.Build.0 = Debug|x86
+		{FC90B451-C7AE-45DA-8629-854EF64F0A68}.Release|x86.ActiveCfg = Release|x86
+		{FC90B451-C7AE-45DA-8629-854EF64F0A68}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76FA41B9-946D-4FEC-9F36-D50A320677E5} = {DF8896D8-29B5-4466-A683-5CD50B6DAF20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9779CF50-90E6-4946-BC67-DA3EB95D2040}
+	EndGlobalSection
+EndGlobal
