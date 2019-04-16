@@ -1,0 +1,58 @@
+
+RECORD   ERRORS
+   #
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9                                                                           TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TY
+  10
+  11
+  12     INVALID TRANSACTION CODE                                              TRANSACTION AMOUNT NOT NUMERIC
+  13
+  14     INVALID TRANSACTION CODE
+  15                                                                                                              INVALID PAYMENT TY
+  16
+  17                                                                                                              INVALID PAYMENT TY
+  18     INVALID TRANSACTION CODE
+  19
+  20
+  21
+  22                                                                                                              INVALID PAYMENT TY
+  23     INVALID TRANSACTION CODE
+  24
+  25
+  26
+  27
+  28
+  29
+  30
+  31
+  32
+  33
+  34                                                                           TRANSACTION AMOUNT NOT NUMERIC
+  35
+  36
+  37
+  38                                                                           TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TY
+  39
+  40                                                                           TRANSACTION AMOUNT NOT NUMERIC
+  41                                                                                                              INVALID PAYMENT TY
+  42     INVALID TRANSACTION CODE
+  43                                                                                                              INVALID PAYMENT TY
+  44
+  45                                                                                                              INVALID PAYMENT TY
+  46     INVALID TRANSACTION CODE
+  47
+  48
+  49
+  50                                                                                                              INVALID PAYMENT TY
+  51     INVALID TRANSACTION CODE
+  52
+
+Total Valid Records:      100
+Total Invalid Records:     52
