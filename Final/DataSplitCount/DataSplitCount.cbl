@@ -80,15 +80,15 @@
        01 ws-totals.
            05 ws-tot-sl-rec                pic 9(4)
                value 0.
-           05 ws-tot-sl-rec-amnt           pic 9(9)v99
+           05 ws-tot-sl-rec-amnt           pic 9(8)v99
                value 0.
            05 ws-tot-s-rec                 pic 9(4)
                value 0.
-           05 ws-tot-s-rec-amnt            pic 9(9)v99
+           05 ws-tot-s-rec-amnt            pic 9(8)v99
                value 0.
            05 ws-tot-l-rec                 pic 9(4)
                value 0.
-           05 ws-tot-l-rec-amnt            pic 9(9)v99
+           05 ws-tot-l-rec-amnt            pic 9(8)v99
                value 0.
            05 ws-tot-s-rec-ptc             pic 999v99
                value 0.
@@ -96,12 +96,12 @@
                value 0.
            05 ws-tot-r-rec                 pic 9(4)
                value 0.
-           05 ws-tot-r-rec-amnt            pic 9(9)v99
+           05 ws-tot-r-rec-amnt            pic 9(8)v99
                value 0.
            05 ws-tot-store-tbl             occurs 6 times.
-               10 ws-tot-store-sl-rec-amnt pic 9(9)v99.
+               10 ws-tot-store-sl-rec-amnt pic 9(8)v99.
                10 ws-tot-store-r-rec       pic 9(4).
-               10 ws-tot-store-r-rec-amnt  pic 9(9)v99.
+               10 ws-tot-store-r-rec-amnt  pic 9(8)v99.
 
        01 ws-td-sl-records.
            05 filler                       pic x value space.
@@ -115,7 +115,7 @@
            05 filler                       pic x(18)
                value 'Total S&L Amount: '.
       *              0---+5+---1---+5+---2---+5+---3
-           05 ws-td-sl-rec-amnt            pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-sl-rec-amnt            pic $$$,$$$,$$9.99.
 
        01 ws-td-s-records.
            05 filler                       pic x value space.
@@ -129,7 +129,7 @@
            05 filler                       pic x(18)
                value 'Total S Amount:   '.
       *              0---+5+---1---+5+---2---+5+---3
-           05 ws-td-s-rec-amnt             pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-s-rec-amnt             pic $$$,$$$,$$9.99.
 
        01 ws-td-l-records.
            05 filler                       pic x value space.
@@ -143,7 +143,7 @@
            05 filler                       pic x(18)
                value 'Total L Amount:   '.
       *              0---+5+---1---+5+---2---+5+---3
-           05 ws-td-l-rec-amnt             pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-l-rec-amnt             pic $$$,$$$,$$9.99.
 
        01 ws-td-s-percent.
            05 filler                       pic x value space.
@@ -175,7 +175,7 @@
            05 filler                       pic x(18)
                value 'Total R Amount:   '.
       *              0---+5+---1---+5+---2---+5+---3
-           05 ws-td-r-rec-amnt             pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-r-rec-amnt             pic $$$,$$$,$$9.99.
 
            05 filler                       pic x value space.
 
@@ -203,11 +203,11 @@
            05 filler                       pic x(3)  value spaces.
            05 ws-td-store-num              pic 99.
            05 filler                       pic x(5) value spaces.
-           05 ws-td-store-sl-rec-amnt      pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-store-sl-rec-amnt      pic $$$,$$$,$$9.99.
            05 filler                       pic x(4) value spaces.
            05 ws-td-store-r-rec            pic Z,ZZ9.
            05 filler                       pic xx   value spaces.
-           05 ws-td-store-r-rec-amnt       pic ZZZ,ZZZ,ZZ9.99.
+           05 ws-td-store-r-rec-amnt       pic $$$,$$$,$$9.99.
 
 
        procedure division.
