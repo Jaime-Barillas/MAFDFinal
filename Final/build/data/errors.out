@@ -1,58 +1,58 @@
 
 RECORD   ERRORS
    #
-   1
-   2
-   3
-   4
-   5
-   6
-   7
-   8
-   9                                                                           TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TY
-  10
-  11
-  12     INVALID TRANSACTION CODE                                              TRANSACTION AMOUNT NOT NUMERIC
-  13
+   1     INVALID INVOICE CODE               SKU CODE IS NOT ALPHABETIC
+   2     INVOICE CODE CANNOT BE REPEATING
+   3     INVOICE VALUE NOT IN RANGE
+   4     INVOICE VALUE IS NOT NUMERIC
+   5     INVOICE CODE CANNOT BE REPEATING
+   6     INVALID INVOICE CODE
+   7     SKU CODE IS NOT ALPHABETIC
+   8     INVOICE CODE CANNOT BE REPEATING
+   9     TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TYPE
+  10     INVOICE VALUE IS NOT NUMERIC       INVOICE VALUE NOT IN RANGE
+  11     INVOICE CODE CANNOT BE REPEATING
+  12     INVALID TRANSACTION CODE           TRANSACTION AMOUNT NOT NUMERIC
+  13     SKU CODE IS NOT ALPHABETIC
   14     INVALID TRANSACTION CODE
-  15                                                                                                              INVALID PAYMENT TY
-  16
-  17                                                                                                              INVALID PAYMENT TY
+  15     INVALID PAYMENT TYPE
+  16     SKU CODE IS NOT ALPHABETIC
+  17     INVALID PAYMENT TYPE
   18     INVALID TRANSACTION CODE
-  19
-  20
-  21
-  22                                                                                                              INVALID PAYMENT TY
+  19     INVALID INVOICE CODE
+  20     INVOICE CODE CANNOT BE REPEATING
+  21     INVOICE CODE CANNOT BE REPEATING
+  22     INVALID PAYMENT TYPE
   23     INVALID TRANSACTION CODE
-  24
-  25
-  26
-  27
-  28
-  29
-  30
-  31
-  32
-  33
-  34                                                                           TRANSACTION AMOUNT NOT NUMERIC
-  35
-  36
-  37
-  38                                                                           TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TY
-  39
-  40                                                                           TRANSACTION AMOUNT NOT NUMERIC
-  41                                                                                                              INVALID PAYMENT TY
+  24     INVALID STORE NUMBER
+  25     INVALID STORE NUMBER
+  26     INVOICE CODE CANNOT BE REPEATING
+  27     INVOICE VALUE NOT IN RANGE
+  28     INVALID INVOICE CODE               INVOICE VALUE NOT IN RANGE
+  29     INVOICE CODE CANNOT BE REPEATING   INVOICE VALUE NOT IN RANGE
+  30     INVOICE VALUE NOT IN RANGE
+  31     INVOICE VALUE NOT IN RANGE
+  32     INVOICE VALUE NOT IN RANGE
+  33     INVOICE VALUE NOT IN RANGE
+  34     TRANSACTION AMOUNT NOT NUMERIC     INVALID STORE NUMBER               INVOICE VALUE NOT IN RANGE
+  35     INVOICE VALUE IS NOT NUMERIC       INVOICE VALUE NOT IN RANGE
+  36     INVOICE CODE CANNOT BE REPEATING   INVOICE VALUE IS NOT NUMERIC       INVOICE VALUE NOT IN RANGE
+  37     SKU CODE IS NOT ALPHABETIC
+  38     TRANSACTION AMOUNT NOT NUMERIC     INVALID PAYMENT TYPE
+  39     INVOICE CODE CANNOT BE REPEATING
+  40     TRANSACTION AMOUNT NOT NUMERIC
+  41     INVALID PAYMENT TYPE               INVALID STORE NUMBER               INVOICE CODE CANNOT BE REPEATING   SKU CODE IS NOT ALPHABETIC
   42     INVALID TRANSACTION CODE
-  43                                                                                                              INVALID PAYMENT TY
-  44
-  45                                                                                                              INVALID PAYMENT TY
+  43     INVALID PAYMENT TYPE
+  44     INVOICE VALUE IS NOT NUMERIC
+  45     INVALID PAYMENT TYPE
   46     INVALID TRANSACTION CODE
-  47
-  48
-  49
-  50                                                                                                              INVALID PAYMENT TY
-  51     INVALID TRANSACTION CODE
-  52
+  47     INVOICE CODE CANNOT BE REPEATING
+  48     INVOICE CODE CANNOT BE REPEATING
+  49     INVOICE VALUE IS NOT NUMERIC
+  50     INVALID PAYMENT TYPE
+  51     INVALID TRANSACTION CODE           INVALID STORE NUMBER
+  52     INVALID STORE NUMBER
 
 Total Valid Records:      100
 Total Invalid Records:     52
