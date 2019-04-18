@@ -210,8 +210,6 @@
 
            perform 100-print-report-header.
 
-           read input-file
-
            perform 110-initialize-stores-table.
 
            perform 200-process-page
