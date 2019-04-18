@@ -109,9 +109,9 @@
                value "#".
        
        01 ws-errors-line3.
-           05 filler                           pic x(2)
+           05 filler                           pic x(1)
                value spaces.
-           05 ws-error-num                     pic Z9
+           05 ws-error-num                     pic ZZ9
                value 0.
            05 filler                           pic x(5)
                value spaces.
@@ -173,6 +173,8 @@
                value "INVOICE VALUE NOT IN RANGE".
            05 ws-sku-error                     pic x(26)
                value "SKU CODE IS NOT ALPHABETIC".
+           05 ws-num                           pic 999
+               value 0.
            
 
        procedure division.
@@ -221,6 +223,7 @@
            move spaces                         to ws-invalid-line.
            move spaces                         to ws-errors-line3.
            move 0                              to ws-errors.
+           add 1                               to ws-num.
            
            if not ws-valid-trans-code then
                add 1 to ws-errors
@@ -296,7 +299,7 @@
                write invalid-line from ws-invalid-line
            end-if.
            
-           move ws-invalid-count               to ws-error-num.
+           move ws-num                         to ws-error-num.
            
            write errors-line from ws-errors-line3
                after advancing 1 line.
