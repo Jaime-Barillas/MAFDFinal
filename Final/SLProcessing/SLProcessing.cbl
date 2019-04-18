@@ -10,7 +10,7 @@
                assign to "data/slrecords.dat"
                organization is line sequential.
            select output-file
-               assign to "data/report-r.out"
+               assign to "data/report-sl.out"
                organization is line sequential.
 
        configuration section.
