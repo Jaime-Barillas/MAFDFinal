@@ -1,6 +1,7 @@
        identification division.
        program-id. Edits.
-
+       author. Connor Trentadue.
+       
        environment division.
        input-output section.
        file-control.
@@ -65,9 +66,9 @@
            
            fd errors-file
                data record is errors-line
-               record contains 132 characters.
+               record contains 160 characters.
                
-           01 errors-line                      pic x(132).
+           01 errors-line                      pic x(160).
            
            
        working-storage section.
@@ -114,46 +115,11 @@
                value 0.
            05 filler                           pic x(5)
                value spaces.
-           05 ws-error1                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error2                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error3                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error4                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error5                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error6                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error7                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error8                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error9                        pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
-           05 ws-error10                       pic x(32)
-               value spaces.
-           05 filler                           pic x(3)
-               value spaces.
+           05 ws-error-arr                     pic x(35).
+           05 ws-error-r redefines
+               ws-error-arr                    occurs 10 times.
+               10 ws-error-t                   pic x(32).
+               10 filler                       pic x(3).
                
        01 ws-error-total-line-1.
            05 filler                           pic x(21)
@@ -216,6 +182,7 @@
                output report-file, 
                invalid-file, errors-file.
                
+           
            perform 500-print-error-headers.
            
            perform 100-read-input-file.
@@ -257,59 +224,51 @@
            
            if not ws-valid-trans-code then
                add 1 to ws-errors
-               move ws-transaction-error       to ws-error1
+               move ws-transaction-error       to ws-error-r(ws-errors)
            end-if.
            if transaction-code = spaces then
                add 1 to ws-errors
-               move ws-empty-transaction       to ws-error2
+               move ws-empty-transaction       to ws-error-r(ws-errors)
            end-if.
            if not transaction-amount is numeric then
                add 1 to ws-errors
-               move ws-invalid-trans-amount    to ws-error3
+               move ws-invalid-trans-amount    to ws-error-r(ws-errors)
            end-if.
            if not ws-valid-pay-type then
                add 1 to ws-errors
-               move ws-pay-type-error          to ws-error4
+               move ws-pay-type-error          to ws-error-r(ws-errors)
            end-if.
            if not ws-valid-store-num then
                add 1 to ws-errors
-               move ws-store-error             to ws-error5
+               move ws-store-error             to ws-error-r(ws-errors)
            end-if.
-      *    if inv-num-1 is not alphabetic then
-      *        add 1 to ws-errors
-      *        move ws-invoice-code-error-1    to ws-error6
-      *    end-if.
-      *    if inv-num-2 is not alphabetic then
-      *        add 1 to ws-errors
-      *        move ws-invoice-code-error-1    to ws-error6
-      *    end-if.
            if inv-num-1 = inv-num-2 then
                add 1 to ws-errors
-               move ws-invoice-code-error-3    to ws-error6
+               move ws-invoice-code-error-3    to ws-error-r(ws-errors)
            end-if.
            if not inv-value is numeric then
                add 1 to ws-errors
-               move ws-invoice-value-error-1   to ws-error7
+               move ws-invoice-value-error-1   to ws-error-r(ws-errors)
            end-if.
            if not ws-valid-inv-code then
                add 1 to ws-errors
-               move ws-invoice-code-error-2    to ws-error8
+               move ws-invoice-code-error-2    to ws-error-r(ws-errors)
            end-if.
            if not ws-valid-inv-code-2 then
                add 1 to ws-errors
-               move ws-invoice-code-error-2    to ws-error8
+               move ws-invoice-code-error-2    to ws-error-r(ws-errors)
            end-if.
            if not inv-value < ws-inv-max then
                add 1 to ws-errors
-               move ws-invoice-value-error-2   to ws-error9
+               move ws-invoice-value-error-2   to ws-error-r(ws-errors)
            end-if.
            if not inv-value > ws-inv-min then
                add 1 to ws-errors
-               move ws-invoice-value-error-2   to ws-error9
+               move ws-invoice-value-error-2   to ws-error-r(ws-errors)
            end-if.
            if sku-code = spaces then
                add 1 to ws-errors
-               move ws-sku-error               to ws-error10
+               move ws-sku-error               to ws-error-r(ws-errors)
            end-if.
            
            if ws-errors = 0 then
